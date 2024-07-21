@@ -1,0 +1,38 @@
+.offcanvas-menu{
+    list-style: none;   
+    padding: 0;
+    margin: 0;
+    font-weight: 900;
+}
+.offcanvas-menu a{
+    text-decoration: none;
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.877);
+}
+.offcanvas-menu-sm a{
+    font-size: 1.7rem;
+    color: yellow;
+}   
+
+.footer-link {
+    padding: 0 ;
+    margin: 10px 0;
+    list-style: none;
+
+}
+.footer-link a{
+    color: white;
+    text-decoration: none;
+}
+.footer-icon {
+    display: flex;
+    gap:10px;  
+    /* gap: khoảng cách giữa các item trong flex */
+}
+.post-content img {
+    width: 80vw;  
+}
+.post-content img~img {  
+    /* không lấy cái đầu, lấy tấm từ sau */
+    width: 100%;  
+}

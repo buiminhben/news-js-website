@@ -1,0 +1,157 @@
+<div class="row me-0">
+  <div class="col-md-7">
+    <img src="public/upload/{{tintuc.cover}}" alt="" class="w-100">
+  </div>
+  <div class="col-md-5 py-5">
+    <div class="w-75">
+      <a href="#">{{tintuc.category}}</a>
+      <h1> {{tintuc.title}} </h1>
+      <p>{{tintuc.content.slice(0,200)}}...</p>
+
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+
+
+    <hr>
+    <div class="col-md-7 offset-md-1 post-content">
+      <div class="d-flex justify-content-between mt-3">
+        <!-- justify-content-between: dạc đều ra -->
+        <div>
+          BY <strong>{{tintuc.author}}</strong>
+        </div>
+        <ul class="d-flex list-unstyled gap-2 m-0 p-0">
+          <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+          <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href=""><i class="fa-brands fa-x-twitter"></i></a></li>
+        </ul>
+
+      </div>
+      {{tintuc.content}}
+    </div>
+    <div class="col-md-4">
+
+    </div>
+  </div>
+  <div class="card my-5 rounded-0">
+    <div class="card-header h2 text-bg-dark rounded-0 d-flex justify-content-between">
+      Đánh giá
+      <div class="d-flex">
+        <button class="btn btn-outline-light btn-sm rounded-0" data-bs-toggle="modal" data-bs-target="#feedbackModal">Viết
+          đánh giá</button>
+          <div class="dropdown d-flex">
+            <button class="btn btn-outline-light dropdown-toggle rounded-0 ms-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" ng-click="order='-date'" >Mới Nhất</a></li>
+              <li><a class="dropdown-item" ng-click="order='date'">Cũ nhất</a></li>
+              <hr class="dropdown-divider">
+              <li>
+                <a class="dropdown-item" ng-click="soSao=5">
+                  Trên<i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" ng-click="soSao=4">
+                  Trên<i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" ng-click="soSao=3">
+                 Trên <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" ng-click="soSao=2">
+                  Trên<i class="fa-solid fa-star text-warning"></i>
+                  <i class="fa-solid fa-star text-warning"></i>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" ng-click="soSao=1">
+                 Trên <i class="fa-solid fa-star text-warning"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+      </div>
+      
+    </div>
+    <div class="card-body">
+      <div ng-repeat="binhluan in tintuc.comments |filter:{star:soSao} | orderBy:order" class="card mb-3 rounded-0">
+
+        <div class="row g-0">
+          <div class="col-md-1">
+            <img src="public/upload/{{binhluan.user.avatar}}" class="img-fluid" alt="...">
+          </div>
+          <div class="col-md-11">
+            <div class="card-body">
+              <h5 class="card-title">{{binhluan.user.fullname}}</h5>
+              <div class="card-text text-warning" ng-bind-html="renderStar(binhluan.star)">
+               
+              </div>
+              <p class="card-text">{{binhluan.content}}</p>
+              <p class="card-text"><small class="text-body-secondary">
+                  <i class="fa-solid fa-clock"></i>
+                  {{binhluan.date}}
+                </small> -
+                <button class="btn btn-outline-primary rounded-pill" ng-click="binhluan.like = binhluan.like +1">
+                  <i class="fa-regular fa-thumbs-up"></i>
+                  <span class="badge text-bg-primary" >{{binhluan.like}}</span>
+                </button>
+
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+     <div class="alert alert-warning" ng-show=" (tintuc.comments | filter:{star:soSao}).length==0">
+      Không tìm thấy bình luận phù hợp
+     </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal viết đánh giá -->
+<div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content rounded-0">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="feedbackModalLabel">Viết đánh giá</h1>
+        
+        <button type="button" id="close-modal" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      
+      <div class="modal-body">
+        <div class="rating text-warning h1 text-center">
+          <i class="fa-{{(saoDangChon>=1 || saoDuocChon>=1)?'solid':'regular'}} fa-star" ng-mouseover="saoDangChon = 1" ng-mouseout="saoDangChon=0" ng-click="saoDuocChon=1"></i>
+          <i class="fa-{{(saoDangChon>=2 || saoDuocChon>=2)?'solid':'regular'}} fa-star" ng-mouseover="saoDangChon = 2" ng-mouseout="saoDangChon=0" ng-click="saoDuocChon=2" ></i>
+          <i class="fa-{{(saoDangChon>=3 || saoDuocChon>=3)?'solid':'regular'}} fa-star" ng-mouseover="saoDangChon = 3" ng-mouseout="saoDangChon=0" ng-click="saoDuocChon=3"></i>
+          <i class="fa-{{(saoDangChon>=4 || saoDuocChon>=4)?'solid':'regular'}} fa-star" ng-mouseover="saoDangChon = 4" ng-mouseout="saoDangChon=0" ng-click="saoDuocChon=4"></i>
+          <i class="fa-{{(saoDangChon>=5 || saoDuocChon>=5)?'solid':'regular'}} fa-star" ng-mouseover="saoDangChon = 5" ng-mouseout="saoDangChon=0" ng-click="saoDuocChon=5"></i>
+        </div>
+
+        <textarea class="form-control" cols="30" rows="5" placeholder="Đánh giá của bạn.." ng-model="noiDungDanhGia"></textarea>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-dark rounded-0" ng-click="luuDanhGia()">Gửi đánh giá </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chi tiết</title>
+  <link rel="stylesheet" href="public/css/bootstrap.min.css">
+  <link rel="stylesheet" href="public/css/style.css">
+</head>
+
+<body class="text-bg-light" ng-app="mydia" ng-controller="mydiaCtrl">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary py-0">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="public/img/logo.avif" alt="" style="width: 110px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">NewSletter</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Subcribe</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop">Menu <i
+                class="fa-solid fa-angles-down"></i></a>
+          </li>
+
+
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+  <div class="offcanvas offcanvas-top text-bg-dark h-100" tabindex="-1" id="offcanvasTop"
+    aria-labelledby="offcanvasTopLabel">
+    <div class="offcanvas-header">
+      <h5></h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="row">
+        <div class="col-md-8">
+          <h5>Topic</h5>
+          <ul class="offcanvas-menu">
+            <li><a href="">Animals</a></li>
+            <li><a href="">Environment</a></li>
+            <li><a href="">History & Culture</a></li>
+            <li><a href="">Science</a></li>
+            <li><a href="">Travel</a></li>
+
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Sites</h5>
+          <ul class="offcanvas-menu offcanvas-menu-sm">
+            <li><a href="">WATCH TV!</a></li>
+            <li><a href="">READ THE MAGAZINE</a></li>
+            <li><a href="">VISIT NAT GEO FAMILY</a></li>
+            <li><a href="">BOOK A TRIP</a></li>
+            <li><a href="">INSPIRE YOUR KIDS</a></li>
+            <li><a href="">LISTEN TO PODCASTS</a></li>
+            <li><a href="">SHOP NAT GEO</a></li>
+            <li><a href="">ATTEND A LIVE EVENT</a></li>
+            <li><a href="">LEARN ABOUT OUR IMPACT</a></li>
+            <li><a href="">SUPPORT OUR MISSION</a></li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
+
+<!-- footer -->
+  <div class="bg-black">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          LEGAL
+          <ul class="footer-link">
+            <li><a href="">Terms of Use</a></li>
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="">Your US State Privacy Rights</a></li>
+            <li><a href="">Do Not Sell or Share My Personal Information</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          LEGAL
+          <ul class="footer-link">
+            <li><a href="">Terms of Use</a></li>
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="">Your US State Privacy Rights</a></li>
+            <li><a href="">Do Not Sell or Share My Personal Information</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          LEGAL
+          <ul class="footer-link">
+            <li><a href="">Terms of Use</a></li>
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="">Your US State Privacy Rights</a></li>
+            <li><a href="">Do Not Sell or Share My Personal Information</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          FOLLOW US <br>
+          <ul class="footer-link footer-icon">
+            <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+    <div class="container pb-3 small d-flex align-items-center">
+      <img src="public/img/logo2.webp" alt="">
+      <div class="text-center w-100 mb-0">Copyright © 1996-2015 National Geographic Society | Copyright © 2015-2024
+        National Geographic Partners, LLC. All rights reserved
+      </div>
+    </div>
+  </div>
+  <script src="public/js/bootstrap.bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/daba042c9f.js" crossorigin="anonymous"></script>
+  <script src="public/js/ajax.googleapis.com_ajax_libs_angularjs_1.8.2_angular.min.js"></script>
+  <script src="public/js/code.angularjs.org_1.8.2_angular-route.min.js"></script>
+  <script src="public/js/app.js"></script>
+
+</body>
+
+</html>

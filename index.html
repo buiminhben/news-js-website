@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mỹ Địa Travel</title>
+  <link rel="stylesheet" href="public/css/bootstrap.min.css">
+  <link rel="stylesheet" href="public/css/style.css">
+  <link rel="shortcut icon" href="Graphicloads-Business-Good-idea.512.png" type="image/x-icon">
+</head>
+<div ng-include="'app/views/menu.html'"></div>
+<body class="{{background}}" ng-app="mydia" ng-controller="mydiaCtrl">
+
+  <div ng-view></div>
+
+ <div ng-include="'app/views/footer.html'"></div>
+
+  <script src="public/js/bootstrap.bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/daba042c9f.js" crossorigin="anonymous"></script>
+  <script src="public/js/ajax.googleapis.com_ajax_libs_angularjs_1.8.2_angular.min.js"></script>
+  <script src="public/js/code.angularjs.org_1.8.2_angular-route.min.js"></script>
+  <script src="public/js/code.angularjs.org_1.8.2_angular-sanitize.min.js"></script>
+  <script src="public/js/app.js"></script>
+  <script src="app/controllers/mydiaCtrl.js"></script>
+  <script src="app/controllers/homeCtrl.js"></script>
+  <script src="app/controllers/detailCtrl.js"></script>
+ 
+</body>
+
+</html>

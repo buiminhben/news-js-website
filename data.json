@@ -1,0 +1,53 @@
+[
+    {
+        "id":1,
+        "category": "Thời sự",
+        "title": "Tổng thống Philippines trải nghiệm không khí Tết tại Hoàng thành Thăng Long",
+        "author":"Vu Anh",
+        "cover": "tintuc1.jpg",
+        "content": "Trong khuôn khổ chuyến thăm cấp nhà nước tới Việt Nam, Tổng thống Philippines Ferdinand Romualdez Marcos Jr. hôm nay cùng Chủ tịch nước Võ Văn Thưởng tới thăm Hoàng thành Thăng Long, quần thể di tích gắn với lịch sử kinh thành Thăng Long.Bên trong Hoàng thành Thăng Long, Chủ tịch nước Võ Văn Thưởng và Tổng thống Marcos Jr. thăm khu trưng bày văn hóa của người dân tộc Thái ở Thái Nguyên. vực quan trọng như giáo dục, văn hóa, du lịch, trong đó có mở thêm đường bay thẳng giữa hai nước.",
+        "date": "2024-01-30 16:46:00",
+        "comments": [
+            {
+                "id":1,
+                "user": {
+                    "id":1,
+                    "fullname": "Bùi Minh Quân",
+                    "avatar": "GettyImages-615818598.avif"
+                },
+                "date":"2024-01-25 16:36:00",
+                "content": "Tuyệt vời ông mặt trời!",
+                "star":5,
+                "like":0
+            }
+        ]
+
+        
+    },
+
+    {
+        "id":2,
+        "category": "Khoa học",
+        "title": "VCCI: Mỗi nơi một kiểu thủ tục cho điện mặt trời mái nhà",
+        "author":"Minh Quan",
+        "cover": "tintuc2.jpg",
+        "content": "Việc lắp đặt điện mặt trời còn nhiều vướng mắc do thủ tục chưa rõ ràng và áp dụng khác nhau tại các địa phương, theo VCCI. Nhận định này được Liên đoàn Thương mại và Công nghiệp Việt Nam (VCCI) nêu khi góp ý với Bộ Công Thương về dự thảo Nghị định phát triển điện mặt trời mái nhà. Đây là loại nguồn điện được khuyến khích nhưng theo VCCI các chính sách phát triển liên quan chưa minh bạch, thống nhất và còn nhiều cách hiểu khác nhau tại mỗi địa phương.",
+        "date": "2024-01-29 12:46:00",
+        "comments": [
+
+        ]
+    },
+
+    {
+        "id":3,
+        "category": "Mays bay",
+        "title": "Đề xuất mở cơ chế cho ACV có tiền xây sân bay Long Thành",
+        "author":"Ben",
+        "cover": "tintuc3.jpg",
+        "content": "Bộ Tài chính đề xuất sửa Nghị định để ACV tăng vốn nhờ chia cổ tức bằng cổ phiếu, giúp thực hiện các dự án sân bay trọng điểm. Tại dự thảo sửa đổi, bổ sung Nghị định 140 năm 2020, Bộ Tài chính đề xuất doanh nghiệp do Nhà nước nắm giữ trên 50% vốn được chia phần lợi nhuận còn lại cho cổ đông bằng cổ phiếu, thay vì tiền mặt như hiện tại. Trả cổ tức bằng cổ phiếu chỉ được áp dụng với công ty cổ phần thực hiện các dự án quan trọng quốc gia được cấp có thẩm phê duyệt, Thủ tướng chấp thuận.",
+        "date": "2024-01-30 16:46:00",
+        "comments": [
+
+        ]
+    }
+]
